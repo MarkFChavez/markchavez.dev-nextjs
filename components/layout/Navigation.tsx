@@ -7,7 +7,11 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const isActive = (path: string) => {
-    return pathname === path;
+    // Normalize pathname by removing trailing slash (except for root)
+    const normalizedPathname = pathname.endsWith('/') && pathname !== '/'
+      ? pathname.slice(0, -1)
+      : pathname;
+    return normalizedPathname === path;
   };
 
   const navItems = [
