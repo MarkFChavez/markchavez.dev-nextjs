@@ -1,184 +1,117 @@
 import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import { cvData } from '@/lib/data/cv';
 
-// Define styles for the PDF
+// Clean, professional CV styles
 const styles = StyleSheet.create({
   page: {
-    padding: 40,
+    padding: 48,
     fontSize: 10,
     fontFamily: 'Helvetica',
-    lineHeight: 1.5,
+    lineHeight: 1.4,
+    color: '#000000',
   },
   header: {
-    marginBottom: 20,
-    borderLeftWidth: 3,
-    borderLeftColor: '#FF006E',
-    paddingLeft: 15,
+    marginBottom: 16,
   },
   name: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 10,
   },
-  contactGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 10,
-    marginBottom: 10,
-  },
-  contactItem: {
+  contactInfo: {
     fontSize: 9,
-    width: '48%',
+    color: '#333333',
   },
-  about: {
-    backgroundColor: '#F9FAFB',
-    padding: 12,
-    borderLeftWidth: 3,
-    borderLeftColor: '#00F0FF',
-    marginBottom: 20,
+  summary: {
     fontSize: 9,
-    lineHeight: 1.6,
+    lineHeight: 1.5,
+    marginBottom: 16,
+    marginTop: 8,
   },
   section: {
-    marginBottom: 20,
+    marginBottom: 16,
   },
   sectionTitle: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: 'bold',
-    marginBottom: 12,
+    marginBottom: 8,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
-    paddingBottom: 6,
+    borderBottomColor: '#000000',
+    paddingBottom: 4,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   workItem: {
-    marginBottom: 16,
-    paddingBottom: 16,
-    borderLeftWidth: 3,
-    borderLeftColor: '#E5E7EB',
-    paddingLeft: 15,
+    marginBottom: 12,
   },
   workHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   employer: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: 'bold',
   },
   role: {
     fontSize: 10,
-    color: '#6B7280',
-    marginTop: 2,
+    fontStyle: 'italic',
+    marginBottom: 4,
   },
   duration: {
-    fontSize: 8,
-    backgroundColor: '#F3F4F6',
-    padding: '4 8',
-    borderWidth: 1,
-    borderColor: '#D1D5DB',
-  },
-  responsibility: {
     fontSize: 9,
-    marginBottom: 6,
-    paddingLeft: 10,
-    lineHeight: 1.5,
+    color: '#333333',
   },
-  techStack: {
+  bulletItem: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 4,
-    marginTop: 8,
+    marginBottom: 4,
+    paddingLeft: 12,
   },
-  techBadge: {
-    fontSize: 7,
-    padding: '3 6',
-    backgroundColor: '#FFFFFF',
-    borderWidth: 1,
-    borderColor: '#D1D5DB',
+  bullet: {
+    width: 8,
+    fontSize: 9,
+  },
+  bulletText: {
+    flex: 1,
+    fontSize: 9,
+    lineHeight: 1.4,
+  },
+  techList: {
+    fontSize: 9,
+    marginTop: 4,
+    color: '#333333',
   },
   educationItem: {
-    backgroundColor: '#F9FAFB',
-    padding: 12,
     marginBottom: 12,
-    borderLeftWidth: 3,
-    borderLeftColor: '#FFBE0B',
   },
   educationHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 6,
+    marginBottom: 4,
   },
   schoolName: {
     fontSize: 11,
     fontWeight: 'bold',
   },
-  course: {
+  degree: {
     fontSize: 9,
-    marginTop: 2,
+    marginBottom: 4,
   },
-  major: {
+  skillsContainer: {
     fontSize: 9,
-    color: '#6B7280',
-    fontStyle: 'italic',
-    marginTop: 1,
+    lineHeight: 1.5,
   },
-  highlight: {
-    fontSize: 8,
-    marginBottom: 3,
-    paddingLeft: 10,
-  },
-  skillsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 4,
-  },
-  skillBadge: {
-    fontSize: 8,
-    padding: '4 8',
-    backgroundColor: '#FFFFFF',
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
-  },
-  projectsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
-  },
-  projectCard: {
-    width: '48%',
-    backgroundColor: '#FFFFFF',
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
-    padding: 10,
+  projectItem: {
     marginBottom: 8,
   },
   projectName: {
     fontSize: 10,
     fontWeight: 'bold',
-    marginBottom: 4,
   },
-  projectUrl: {
-    fontSize: 7,
-    color: '#00F0FF',
-    marginBottom: 6,
-  },
-  projectDescription: {
-    fontSize: 8,
+  projectDetails: {
+    fontSize: 9,
+    marginTop: 4,
     lineHeight: 1.4,
-    marginBottom: 6,
-  },
-  projectStack: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 3,
-  },
-  projectTech: {
-    fontSize: 6,
-    padding: '2 4',
-    backgroundColor: '#F3F4F6',
-    borderWidth: 1,
-    borderColor: '#D1D5DB',
   },
 });
 
@@ -191,50 +124,43 @@ export const CVDocument = () => {
       <Page size="A4" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.name}>Mark Chavez</Text>
-          <View style={styles.contactGrid}>
-            <Text style={styles.contactItem}>Manila, Philippines, PHT</Text>
-            <Text style={styles.contactItem}>https://markchavez.dev</Text>
-            <Text style={styles.contactItem}>mjfchavez@gmail.com</Text>
-            <Text style={styles.contactItem}>github.com/markfchavez</Text>
+          <Text style={styles.name}>MARK CHAVEZ</Text>
+
+          <View>
+              <Text style={styles.contactInfo}>Manila, Philippines</Text>
+              <Text style={styles.contactInfo}>mjfchavez@gmail.com</Text>
+              <Text style={styles.contactInfo}>markchavez.dev</Text>
+              <Text style={styles.contactInfo}>github.com/markfchavez</Text>
           </View>
         </View>
 
-        {/* About */}
-        <View style={styles.about}>
-          <Text>
-            Ruby on Rails specialist with 10+ years of experience building web applications across childcare,
-            healthcare, finance, and telecom industries. Expert in Hotwire and Stimulus for creating modern,
-            interactive experiences with minimal JavaScript. Focused on Rails conventions, clean architecture, and
-            pragmatic solutions that scale. Self-learner who enjoys diving deep into frameworks and solving complex
-            technical challenges.
-          </Text>
-        </View>
+        {/* Summary */}
+        <Text style={styles.summary}>
+          Ruby on Rails specialist with 10+ years of experience building web applications across childcare,
+          healthcare, finance, and telecom industries. Expert in Hotwire and Stimulus for creating modern,
+          interactive experiences with minimal JavaScript. Focused on Rails conventions, clean architecture,
+          and pragmatic solutions that scale.
+        </Text>
 
         {/* Work Experience */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Work Experience</Text>
+          <Text style={styles.sectionTitle}>Experience</Text>
           {work_experiences.map((work, index) => (
             <View key={index} style={styles.workItem}>
               <View style={styles.workHeader}>
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.employer}>{work.employer}</Text>
-                  <Text style={styles.role}>{work.role}</Text>
-                </View>
+                <Text style={styles.employer}>{work.employer}</Text>
                 <Text style={styles.duration}>{work.duration}</Text>
               </View>
+              <Text style={styles.role}>{work.role}</Text>
               {work.responsibilities.slice(0, 3).map((r, idx) => (
-                <Text key={idx} style={styles.responsibility}>
-                  {r}
-                </Text>
+                <View key={idx} style={styles.bulletItem}>
+                  <Text style={styles.bullet}>•</Text>
+                  <Text style={styles.bulletText}>{r}</Text>
+                </View>
               ))}
-              <View style={styles.techStack}>
-                {work.technologies.slice(0, 8).map((tech) => (
-                  <Text key={tech} style={styles.techBadge}>
-                    {tech}
-                  </Text>
-                ))}
-              </View>
+              <Text style={styles.techList}>
+                Technologies: {work.technologies.slice(0, 8).join(', ')}
+              </Text>
             </View>
           ))}
         </View>
@@ -245,65 +171,43 @@ export const CVDocument = () => {
           {education.map((school, index) => (
             <View key={index} style={styles.educationItem}>
               <View style={styles.educationHeader}>
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.schoolName}>{school.name}</Text>
-                  <Text style={styles.course}>{school.course}</Text>
-                  <Text style={styles.major}>{school.major}</Text>
-                </View>
+                <Text style={styles.schoolName}>{school.name}</Text>
                 <Text style={styles.duration}>{school.years}</Text>
               </View>
+              <Text style={styles.degree}>{school.course} - {school.major}</Text>
               {school.highlights.map((h, idx) => (
-                <Text key={idx} style={styles.highlight}>
-                  {h}
-                </Text>
+                <View key={idx} style={styles.bulletItem}>
+                  <Text style={styles.bullet}>•</Text>
+                  <Text style={styles.bulletText}>{h}</Text>
+                </View>
               ))}
             </View>
           ))}
         </View>
 
-        {/* Skills & Tools */}
-        <View style={{ flexDirection: 'row', gap: 16, marginBottom: 20 }}>
-          <View style={{ flex: 1 }}>
-            <Text style={styles.sectionTitle}>Skills</Text>
-            <View style={styles.skillsGrid}>
-              {skills.map((skill) => (
-                <Text key={skill} style={styles.skillBadge}>
-                  {skill}
-                </Text>
-              ))}
-            </View>
-          </View>
-          <View style={{ flex: 1 }}>
-            <Text style={styles.sectionTitle}>Tools</Text>
-            <View style={styles.skillsGrid}>
-              {tools.map((tool) => (
-                <Text key={tool} style={styles.skillBadge}>
-                  {tool}
-                </Text>
-              ))}
-            </View>
-          </View>
+        {/* Skills */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Skills</Text>
+          <Text style={styles.skillsContainer}>{skills.join(' • ')}</Text>
+        </View>
+
+        {/* Tools */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Tools</Text>
+          <Text style={styles.skillsContainer}>{tools.join(' • ')}</Text>
         </View>
 
         {/* Side Projects */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Side Projects</Text>
-          <View style={styles.projectsGrid}>
-            {side_projects.slice(0, 6).map((project) => (
-              <View key={project.name} style={styles.projectCard}>
-                <Text style={styles.projectName}>{project.name}</Text>
-                {project.web_url && <Text style={styles.projectUrl}>{project.web_url}</Text>}
-                <Text style={styles.projectDescription}>{project.description}</Text>
-                <View style={styles.projectStack}>
-                  {project.stack.slice(0, 4).map((tech) => (
-                    <Text key={tech} style={styles.projectTech}>
-                      {tech}
-                    </Text>
-                  ))}
-                </View>
-              </View>
-            ))}
-          </View>
+          <Text style={styles.sectionTitle}>Projects</Text>
+          {side_projects.map((project) => (
+            <View key={project.name} style={styles.projectItem}>
+              <Text style={styles.projectName}>{project.name}</Text>
+              <Text style={styles.projectDetails}>
+                {project.description} — {project.stack.slice(0, 4).join(', ')}
+              </Text>
+            </View>
+          ))}
         </View>
       </Page>
     </Document>
