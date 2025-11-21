@@ -60,7 +60,7 @@ export default function Home() {
             </div>
 
             {/* Latest Project Featured Box */}
-            <div className="bg-electric-pink bg-opacity-10 border-4 border-electric-pink p-6 shadow-brutal hover:shadow-brutal-lg transition-all transform -rotate-1">
+            <div className="bg-white border-4 border-electric-pink p-6 shadow-brutal hover:shadow-brutal-lg transition-all transform -rotate-1">
               <div className="space-y-3">
                 {/* Header */}
                 <div className="flex items-center gap-3">
