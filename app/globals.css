@@ -68,18 +68,19 @@
   --animate-gradient: gradient-shift 3s ease infinite;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Disabled to ensure consistent colors across devices */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 /* Base styles with grid background pattern */
 body {
   position: relative;
   overflow-x: hidden;
-  background: var(--background);
+  /* background: var(--background); */ /* Disabled to let Tailwind gradient work */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -110,10 +111,18 @@ body::before {
 
 /* Gradient text effects */
 .gradient-text-electric {
+  color: #FF006E; /* Fallback color for browsers that don't support background-clip */
   background: linear-gradient(135deg, #FF006E 0%, #FFBE0B 50%, #00F0FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Fallback for browsers without background-clip support */
+@supports not (background-clip: text) {
+  .gradient-text-electric {
+    color: #FF006E;
+  }
 }
 
 /* Custom link styles */

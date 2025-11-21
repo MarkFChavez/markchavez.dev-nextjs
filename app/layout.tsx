@@ -15,6 +15,9 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "Mark Chavez - Rails Developer",
   description: "Ruby on Rails developer specializing in Hotwire, Stimulus, and progressive enhancement",
+  other: {
+    "color-scheme": "light",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ colorScheme: "light" }}>
       <body
         className={`${firaCode.variable} bg-gradient-to-br from-white via-gray-50 to-gray-100 text-gray-900 min-h-screen antialiased`}
         style={{ fontFamily: 'var(--font-fira-code), monospace' }}
