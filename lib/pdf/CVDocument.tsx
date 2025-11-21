@@ -1,5 +1,6 @@
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import { cvData } from '@/lib/data/cv';
+import path from 'path';
 
 // Clean, professional CV styles
 const styles = StyleSheet.create({
@@ -11,7 +12,18 @@ const styles = StyleSheet.create({
     color: '#000000',
   },
   header: {
+    flexDirection: 'row',
     marginBottom: 16,
+  },
+  headerText: {
+    flex: 1,
+  },
+  profilePhoto: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    marginLeft: 16,
+    border: '2px solid #000000',
   },
   name: {
     fontSize: 22,
@@ -118,20 +130,23 @@ const styles = StyleSheet.create({
 // PDF Document Component
 export const CVDocument = () => {
   const { work_experiences, education, skills, tools, side_projects } = cvData;
+  const imagePath = path.join(process.cwd(), 'public', 'me.jpg');
 
   return (
     <Document>
       <Page size="A4" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.name}>MARK CHAVEZ</Text>
-
-          <View>
-              <Text style={styles.contactInfo}>Manila, Philippines</Text>
-              <Text style={styles.contactInfo}>mjfchavez@gmail.com</Text>
-              <Text style={styles.contactInfo}>markchavez.dev</Text>
-              <Text style={styles.contactInfo}>github.com/markfchavez</Text>
+          <View style={styles.headerText}>
+            <Text style={styles.name}>MARK CHAVEZ</Text>
+            <View>
+                <Text style={styles.contactInfo}>Manila, Philippines</Text>
+                <Text style={styles.contactInfo}>mjfchavez@gmail.com</Text>
+                <Text style={styles.contactInfo}>markchavez.dev</Text>
+                <Text style={styles.contactInfo}>github.com/markfchavez</Text>
+            </View>
           </View>
+          <Image src={imagePath} style={styles.profilePhoto} />
         </View>
 
         {/* Summary */}
