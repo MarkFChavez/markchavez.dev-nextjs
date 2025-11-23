@@ -149,6 +149,15 @@ export const cvData: CVData = {
   ],
   side_projects: [
     {
+      name: "League Directory",
+      web_url: "https://lolpedia.xyz",
+      description: "Directory of League of Legends champions, skills, and items. Uses the gem 'lol_data_fetcher-ruby' to access Riot API.",
+      stack: [
+        "ruby-on-rails",
+        "api",
+      ]
+    },
+    {
       name: "My Ride Log",
       web_url: "https://marksinmotion.bike",
       description: "Rails application that syncs cycling workout data from Strava via webhooks and visualizes training metrics with D3.js. Built to motivate consistent training through data-driven insights. Demonstrates real-time data processing and API integration patterns.",
