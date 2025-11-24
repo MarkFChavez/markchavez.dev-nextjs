@@ -61,6 +61,10 @@ body::before {
 }
 
 /* Custom border widths */
+.border-3 {
+  border-width: 3px;
+}
+
 .border-6 {
   border-width: 6px;
 }
