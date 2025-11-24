@@ -34,7 +34,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="relative pt-6 pb-4 sm:pt-6 sm:pb-5 md:pt-6 md:pb-6 bg-white border-b-4 sm:border-b-6 md:border-b-8 border-black">
+    <nav className="relative pt-2 pb-4 sm:pt-2 sm:pb-5 md:pt-3 md:pb-6 bg-white border-b-4 sm:border-b-6 md:border-b-8 border-black">
       <div className="max-w-3xl mx-auto px-2 sm:px-4">
         <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
           {navItems.map((item) => {
