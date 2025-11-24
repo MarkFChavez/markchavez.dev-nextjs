@@ -1,90 +1,50 @@
 @import "tailwindcss";
 
-/* BOLD BRUTALIST DESIGN SYSTEM */
+/* BRUTALIST BLACK & WHITE DESIGN SYSTEM */
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 
-  /* Electric colors - Memphis/Maximalist inspired */
-  --electric-blue: #00F0FF;
-  --electric-pink: #FF006E;
-  --electric-yellow: #FFBE0B;
-  --electric-green: #00FF85;
-  --electric-purple: #8B5CF6;
-  --electric-orange: #FF6B35;
-
-  /* Neon colors */
-  --neon-pink: #FF10F0;
-  --neon-cyan: #00FFFF;
-  --neon-lime: #CCFF00;
-  --neon-coral: #FF4365;
-
-  /* Bold colors */
-  --bold-red: #EF233C;
-  --bold-blue: #023E8A;
-  --bold-yellow: #FFD60A;
-  --bold-green: #06FFA5;
+  /* Pure monochrome palette */
+  --black: #000000;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-medium: #666666;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Electric color palette */
-  --color-electric-blue: var(--electric-blue);
-  --color-electric-pink: var(--electric-pink);
-  --color-electric-yellow: var(--electric-yellow);
-  --color-electric-green: var(--electric-green);
-  --color-electric-purple: var(--electric-purple);
-  --color-electric-orange: var(--electric-orange);
+  /* Monochrome palette */
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-gray-light: var(--gray-light);
+  --color-gray-medium: var(--gray-medium);
 
-  /* Neon color palette */
-  --color-neon-pink: var(--neon-pink);
-  --color-neon-cyan: var(--neon-cyan);
-  --color-neon-lime: var(--neon-lime);
-  --color-neon-coral: var(--neon-coral);
+  /* Brutal box shadows - solid black only */
+  --shadow-brutal: 8px 8px 0px 0px #000000;
+  --shadow-brutal-sm: 4px 4px 0px 0px #000000;
+  --shadow-brutal-lg: 12px 12px 0px 0px #000000;
+  --shadow-brutal-xl: 16px 16px 0px 0px #000000;
 
-  /* Bold color palette */
-  --color-bold-red: var(--bold-red);
-  --color-bold-blue: var(--bold-blue);
-  --color-bold-yellow: var(--bold-yellow);
-  --color-bold-green: var(--bold-green);
-
-  /* Brutal box shadows */
-  --shadow-brutal: 8px 8px 0px 0px rgba(0,0,0,1);
-  --shadow-brutal-sm: 4px 4px 0px 0px rgba(0,0,0,1);
-  --shadow-brutal-lg: 12px 12px 0px 0px rgba(0,0,0,1);
-  --shadow-neon-pink: 0 0 20px rgba(255, 16, 240, 0.8);
-  --shadow-neon-blue: 0 0 20px rgba(0, 240, 255, 0.8);
-  --shadow-neon-yellow: 0 0 20px rgba(255, 190, 11, 0.8);
-
-  /* Custom animations */
-  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --animate-wiggle: wiggle 1s ease-in-out infinite;
-  --animate-slide-up: slideUp 0.5s ease-out;
-  --animate-pop: pop 0.3s ease-out;
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-gradient: gradient-shift 3s ease infinite;
+  /* Borders */
+  --border-brutal: 4px solid #000000;
+  --border-brutal-thick: 6px solid #000000;
+  --border-brutal-heavy: 8px solid #000000;
 }
 
-/* Disabled to ensure consistent colors across devices */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
-/* Base styles with grid background pattern */
+/* Base styles - pure brutalist */
 body {
   position: relative;
   overflow-x: hidden;
-  /* background: var(--background); */ /* Disabled to let Tailwind gradient work */
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Fira Code', 'Courier New', monospace;
 }
 
+/* Optional: Stark grid background pattern */
 body::before {
   content: '';
   position: fixed;
@@ -93,8 +53,8 @@ body::before {
   right: 0;
   bottom: 0;
   background:
-    linear-gradient(90deg, rgba(255, 0, 110, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(255, 190, 11, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
@@ -109,92 +69,45 @@ body::before {
   border-width: 8px;
 }
 
-/* Gradient text effects */
-.gradient-text-electric {
-  color: #FF006E; /* Fallback color for browsers that don't support background-clip */
-  background: linear-gradient(135deg, #FF006E 0%, #FFBE0B 50%, #00F0FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Brutalist text effects */
+.text-brutal-inverse {
+  background: #000000;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
 }
 
-/* Fallback for browsers without background-clip support */
-@supports not (background-clip: text) {
-  .gradient-text-electric {
-    color: #FF006E;
-  }
-}
-
-/* Custom link styles */
+/* Custom link styles - heavy underlines */
 .t-link {
   text-decoration: underline;
   text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
-  transition: all 0.3s;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #000000;
+  transition: all 0.2s;
+  color: #000000;
 }
 
 .t-link:hover {
-  text-underline-offset: 8px;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-/* Keyframe animations */
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-3deg); }
-  50% { transform: rotate(3deg); }
-}
-
+/* Minimal animations for brutalist aesthetic */
 @keyframes slideUp {
   0% { transform: translateY(20px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes pop {
-  0% { transform: scale(0.95); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Animation utility classes */
-.animate-wiggle {
-  animation: wiggle 1s ease-in-out infinite;
-}
-
 .animate-slide-up {
-  animation: slideUp 0.5s ease-out;
+  animation: slideUp 0.3s ease-out;
 }
 
-.animate-pop {
-  animation: pop 0.3s ease-out;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Bold card styles with brutal shadow */
+/* Brutalist card styles with solid shadows */
 .card-brutal {
-  border: 4px solid black;
+  border: 4px solid #000000;
   box-shadow: var(--shadow-brutal);
-  transition: all 0.3s;
+  background: #ffffff;
+  transition: all 0.2s;
 }
 
 .card-brutal:hover {
@@ -202,65 +115,45 @@ body::before {
   transform: translate(-4px, -4px);
 }
 
-/* Background gradients */
-.bg-gradient-electric {
-  background: linear-gradient(135deg, #FF006E 0%, #FFBE0B 50%, #00F0FF 100%);
-}
-
-.bg-gradient-neon {
-  background: linear-gradient(135deg, #FF10F0 0%, #00FFFF 100%);
-}
-
-.bg-gradient-bold {
-  background: linear-gradient(90deg, #EF233C 0%, #FFD60A 50%, #06FFA5 100%);
-}
-
-/* Text shadow for accessibility */
-.text-shadow-strong {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-/* Legacy utility classes */
+/* Utility classes - brutalist style */
 .t-underlined {
   text-decoration: underline;
   text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #000000;
 }
 
 .t-highlight {
-  background-color: rgb(129 140 248 / 0.2);
-}
-
-.t-shortcut-highlight {
-  color: rgb(17 24 39);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.125rem 0.25rem;
 }
 
 .t-muted {
-  color: rgb(156 163 175);
+  color: #666666;
 }
 
 .t-muted:hover {
-  color: white;
+  color: #000000;
 }
 
 .t-link-disabled {
-  color: rgb(156 163 175);
+  color: #cccccc;
   cursor: not-allowed;
+  text-decoration: line-through;
 }
 
 .t-border {
-  border: 1px solid rgb(129 140 248);
+  border: 4px solid #000000;
 }
 
 /* Responsive brutal shadows for mobile */
 @media (max-width: 768px) {
   .shadow-brutal, .card-brutal {
-    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    box-shadow: 4px 4px 0px 0px #000000;
   }
 
   .shadow-brutal-lg, .card-brutal:hover {
-    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+    box-shadow: 6px 6px 0px 0px #000000;
   }
 }

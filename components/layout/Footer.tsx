@@ -2,13 +2,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-16 border-t-4 border-black bg-white py-8">
+    <footer className="relative mt-16 border-t-8 border-black bg-white py-8">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
 
           {/* Left: Copyright */}
           <div className="text-center md:text-left">
-            <p className="font-bold text-sm">
+            <p className="font-black text-sm">
               © {currentYear} Mark Chavez
             </p>
             <p className="text-xs text-gray-600 mt-1">
@@ -22,23 +22,23 @@ export default function Footer() {
               href="https://github.com/markfchavez"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold hover:text-electric-pink transition-colors"
+              className="text-sm font-bold underline decoration-2 underline-offset-4 hover:bg-black hover:text-white hover:no-underline px-2 py-1 transition-all"
             >
               GitHub
             </a>
-            <span className="text-gray-300">•</span>
+            <span className="text-black font-bold">|</span>
             <a
               href="https://www.linkedin.com/in/markchavezdev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-bold hover:text-electric-blue transition-colors"
+              className="text-sm font-bold underline decoration-2 underline-offset-4 hover:bg-black hover:text-white hover:no-underline px-2 py-1 transition-all"
             >
               LinkedIn
             </a>
-            <span className="text-gray-300">•</span>
+            <span className="text-black font-bold">|</span>
             <a
               href="mailto:mjfchavez@gmail.com"
-              className="text-sm font-bold hover:text-electric-green transition-colors"
+              className="text-sm font-bold underline decoration-2 underline-offset-4 hover:bg-black hover:text-white hover:no-underline px-2 py-1 transition-all"
             >
               Email
             </a>

@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ colorScheme: "light" }}>
       <body
-        className={`${firaCode.variable} bg-gradient-to-br from-white via-gray-50 to-gray-100 text-gray-900 min-h-screen antialiased`}
+        className={`${firaCode.variable} bg-white text-black min-h-screen antialiased`}
         style={{ fontFamily: 'var(--font-fira-code), monospace' }}
       >
         <ConditionalLayout>{children}</ConditionalLayout>
