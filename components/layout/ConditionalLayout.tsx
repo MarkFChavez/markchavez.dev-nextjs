@@ -24,7 +24,7 @@ export default function ConditionalLayout({
           {!isCVPage && (
             <>
               {/* Fixed header with bold design */}
-              <div className="fixed top-0 inset-x-0 bg-white border-b-4 sm:border-b-6 md:border-b-8 border-black shadow-brutal-sm md:shadow-brutal z-50">
+              <div className="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md border-b-4 sm:border-b-6 md:border-b-8 border-black shadow-brutal-sm md:shadow-brutal z-50">
                 <div className="max-w-4xl mx-auto p-3 sm:p-4">
                   <Header />
                 </div>
