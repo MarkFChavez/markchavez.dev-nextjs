@@ -19,9 +19,12 @@ export default function Header() {
 
           <div className="text-left">
             <Link href="/" className="block">
-              <span className="text-2xl font-black tracking-tight text-black border-b-4 border-black hover:bg-black hover:text-white transition-colors px-1">
+              <span className="text-2xl font-black tracking-tight text-black hover:bg-black hover:text-white transition-colors px-1">
                 @markfchavez
               </span>
+              <p className="text-sm font-thin text-black px-1">
+                Manila, Philippines
+              </p>
             </Link>
           </div>
         </div>
