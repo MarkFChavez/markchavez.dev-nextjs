@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="relative py-3">
+    <header className="sticky top-0 z-50 py-3 bg-white/80 backdrop-blur-md">
       <div className="text-center grid grid-cols-1 gap-4">
         {/* Profile section - brutalist styling */}
         <div className="flex items-center justify-center space-x-4">
