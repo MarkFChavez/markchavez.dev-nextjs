@@ -25,19 +25,6 @@ export default function Header() {
             </Link>
           </div>
         </div>
-
-        {/* Tech stack - monochrome pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-bold">
-          <span className="px-3 py-1.5 bg-black text-white border-4 border-black">
-            RAILS
-          </span>
-          <span className="px-3 py-1.5 bg-white text-black border-4 border-black">
-            HOTWIRE
-          </span>
-          <span className="px-3 py-1.5 bg-black text-white border-4 border-black">
-            STIMULUS
-          </span>
-        </div>
       </div>
     </header>
   );
