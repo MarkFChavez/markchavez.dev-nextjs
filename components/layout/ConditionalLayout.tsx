@@ -31,7 +31,7 @@ export default function ConditionalLayout({
               </div>
 
               {/* Spacer for fixed header */}
-              <div className="h-24 sm:h-28 md:h-32"></div>
+              <div className="h-18"></div>
 
               {/* Navigation */}
               <Navigation />
