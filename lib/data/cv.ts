@@ -149,6 +149,15 @@ export const cvData: CVData = {
   ],
   side_projects: [
     {
+      name: "Jimny PH Maintenance",
+      web_url: "https://jimnypms-nextjs.onrender.com",
+      description: "A preventive maintenance scheduler for Suzuki Jimny owners. Tracks service history, upcoming maintenance tasks, and helps owners stay on top of their vehicle care.",
+      stack: [
+        "js",
+        "maintenance-data"
+      ]
+    },
+    {
       name: "League Rosters",
       web_url: "https://lolroster.xyz",
       description: "Directory of League of Legends teams and rosters.",
