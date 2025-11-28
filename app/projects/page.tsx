@@ -61,6 +61,10 @@ export default function ProjectsPage() {
           </div>
         ))}
       </div>
+
+      <p className="text-center font-black text-lg mt-6">
+        ...and many more
+      </p>
     </section>
   );
 }
