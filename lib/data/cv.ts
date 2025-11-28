@@ -149,9 +149,19 @@ export const cvData: CVData = {
   ],
   side_projects: [
     {
+      name: "League Rosters",
+      web_url: "https://lolroster.xyz",
+      description: "Directory of League of Legends teams and rosters.",
+      stack: [
+        "ruby-on-rails",
+        "web-scraping",
+        "background-jobs",
+      ]
+    },
+    {
       name: "League Directory",
       web_url: "https://lolpedia.xyz",
-      description: "Directory of League of Legends champions, skills, and items. Uses the gem 'lol_data_fetcher-ruby' to access Riot API.",
+      description: "Directory of League of Legends champions, skills, and items.",
       stack: [
         "ruby-on-rails",
         "api",
