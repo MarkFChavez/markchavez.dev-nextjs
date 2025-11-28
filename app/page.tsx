@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import { cvData } from '@/lib/data/cv';
-import { readingData } from '@/lib/data/reading';
 
 export default function Home() {
   const latestProject = cvData.side_projects[0];
-  const currentBook = readingData.current_book;
 
   return (
     <>
@@ -31,28 +29,6 @@ export default function Home() {
             <p className="bg-white border-6 border-black p-6 shadow-brutal">
               I&apos;ve worked across <span className="font-bold">childcare, healthcare, finance/crypto, and telecom</span> companies, helping teams design and deliver reliable, scalable web applications. Whether it&apos;s complex billing systems, real-time features with Turbo Streams, or interactive UI with Stimulus controllers, I focus on pragmatic solutions that scale as needs grow.
             </p>
-
-            {/* Currently Reading Inline Badge */}
-            <div className="bg-white border-6 border-black p-4 shadow-brutal">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl font-black">▶</span>
-                <div>
-                  <span className="text-sm font-bold">Currently reading:</span>
-                  {currentBook.link ? (
-                    <a
-                      href={currentBook.link}
-                      className="text-base font-black ml-2 underline decoration-4 underline-offset-4 hover:bg-black hover:text-white hover:no-underline px-1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {currentBook.title.toUpperCase()}
-                    </a>
-                  ) : (
-                    <span className="text-base font-black ml-2">{currentBook.title.toUpperCase()}</span>
-                  )}
-                </div>
-              </div>
-            </div>
 
             {/* Latest Project Featured Box */}
             <div className="bg-white border-6 border-black p-6 shadow-brutal-lg">
