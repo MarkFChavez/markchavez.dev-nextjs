@@ -217,14 +217,6 @@ export const cvData: CVData = {
       ]
     },
     {
-      name: "Jimny Maintenance Help",
-      description: "Rails-based maintenance scheduler for my Suzuki Jimny. Simple, focused application demonstrating Rails conventions for CRUD operations and domain modeling. Built following the principle that not every app needs complex JavaScript.",
-      stack: [
-        "ruby-on-rails",
-        "server-rendered-html"
-      ]
-    },
-    {
       name: "Axie Scholar Management",
       description: "Scholar tracking and payment management system built with Rails and Hotwire. Real-time earnings updates using Turbo Streams, demonstrating how to build responsive dashboards without React or Vue. Automated payment calculations with background jobs.",
       stack: [
