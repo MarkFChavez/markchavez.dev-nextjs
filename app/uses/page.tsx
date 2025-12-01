@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function UsesPage() {
   return (
     <div className="max-w-[900px] mx-auto mt-4">
@@ -7,6 +9,40 @@ export default function UsesPage() {
           <h1 className="text-4xl md:text-5xl font-black tracking-tight bg-black text-white px-6 py-3 border-6 border-black shadow-brutal-lg">
             MY SETUP
           </h1>
+        </div>
+
+        {/* FEATURED WORKSPACE CARD */}
+        <div className="relative bg-black border-6 border-black shadow-brutal-lg">
+          {/* Corner icon badge */}
+          <div className="absolute -top-4 -left-4 w-20 h-20 bg-white border-6 border-black flex items-center justify-center shadow-brutal-sm rotate-12">
+            <span className="text-black font-black text-4xl">■</span>
+          </div>
+
+          <div className="pt-12 pb-8 px-6 md:px-12">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              {/* Text side */}
+              <div className="md:w-1/3">
+                <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-2">
+                  MY<br/>WORKSPACE
+                </h2>
+                <div className="h-2 w-20 bg-white"></div>
+              </div>
+
+              {/* SVG side */}
+              <div className="md:w-2/3 bg-white border-6 border-white p-6 shadow-brutal">
+                <Image
+                  src="/desk-setup.svg"
+                  alt="Desk setup illustration showing split keyboard and monitor"
+                  width={500}
+                  height={320}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom stripe */}
+          <div className="h-4 bg-white"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
