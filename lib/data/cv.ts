@@ -149,6 +149,15 @@ export const cvData: CVData = {
   ],
   side_projects: [
     {
+      name: "TypeLit",
+      web_url: "https://github.com/MarkFChavez/typelit",
+      description: "A self-hosted typing practice app that lets you type through your own books. Read, type, and learn—all at once.",
+      stack: [
+        "ruby-on-rails",
+        "tailwindcss"
+      ]
+    },
+    {
       name: "Jimny PH Maintenance",
       web_url: "https://jimnypms.xyz",
       description: "A preventive maintenance scheduler for Suzuki Jimny owners. Tracks service history, upcoming maintenance tasks, and helps owners stay on top of their vehicle care.",
