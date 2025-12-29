@@ -149,6 +149,15 @@ export const cvData: CVData = {
   ],
   side_projects: [
     {
+      name: "One Rep. Every Day",
+      web_url: "https://onerep.day",
+      description: "A 365-day challenge to do Bulgarian split squats every single day. No excuses, no skipped days. Just one rep at a time.",
+      stack: [
+        "react.js",
+        "tailwindcss"
+      ]
+    },
+    {
       name: "TypeLit",
       web_url: "https://github.com/MarkFChavez/typelit",
       description: "A self-hosted typing practice app that lets you type through your own books. Read, type, and learn—all at once.",
