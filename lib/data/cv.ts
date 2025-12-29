@@ -154,7 +154,8 @@ export const cvData: CVData = {
       description: "A 365-day challenge to do Bulgarian split squats every single day. No excuses, no skipped days. Just one rep at a time.",
       stack: [
         "react.js",
-        "tailwindcss"
+        "tailwindcss",
+        "notion-api"
       ]
     },
     {
