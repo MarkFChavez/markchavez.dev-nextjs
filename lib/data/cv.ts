@@ -149,6 +149,15 @@ export const cvData: CVData = {
   ],
   side_projects: [
     {
+      name: "Napagastos",
+      web_url: "https://napagastos.com",
+      description: "A simple, private expense tracker that helps you understand your daily spending habits. Track every peso, effortlessly.",
+      stack: [
+        "ruby-on-rails",
+        "tailwindcss"
+      ]
+    },
+    {
       name: "One Rep. Every Day",
       web_url: "https://onerep.day",
       description: "A 365-day challenge to do Bulgarian split squats every single day. No excuses, no skipped days. Just one rep at a time.",
