@@ -11,7 +11,6 @@ export default function ConditionalLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  // Remove trailing slash for consistent comparison
   const normalizedPathname = pathname.endsWith('/') && pathname !== '/'
     ? pathname.slice(0, -1)
     : pathname;
@@ -19,27 +18,16 @@ export default function ConditionalLayout({
 
   return (
     <>
-      <div className="relative z-10 p-2 flex items-center justify-center">
-        <section className={`space-y-6 my-12 w-full ${isCVPage ? 'max-w-5xl' : 'max-w-4xl'} px-2 lg:px-4`}>
+      <div className="relative z-10 flex items-center justify-center">
+        <section className={`space-y-8 my-16 w-full ${isCVPage ? 'max-w-4xl' : 'max-w-2xl'} px-6`}>
           {!isCVPage && (
             <>
-              {/* Fixed header with bold design */}
-              <div className="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md border-b-4 sm:border-b-6 md:border-b-8 border-black shadow-brutal-sm md:shadow-brutal z-50">
-                <div className="max-w-4xl mx-auto p-3 sm:p-4">
-                  <Header />
-                </div>
-              </div>
-
-              {/* Spacer for fixed header */}
-              <div className="h-18"></div>
-
-              {/* Navigation */}
+              <Header />
               <Navigation />
             </>
           )}
 
-          {/* Main content area */}
-          <main className="animate-slide-up pb-16">
+          <main className="animate-fade-in">
             {children}
           </main>
         </section>

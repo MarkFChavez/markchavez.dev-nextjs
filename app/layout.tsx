@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Mark Chavez - Rails Developer",
   description: "Ruby on Rails developer specializing in Hotwire, Stimulus, and progressive enhancement",
   other: {
-    "color-scheme": "light",
+    "color-scheme": "dark",
   },
 };
 
@@ -26,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ colorScheme: "light" }}>
+    <html lang="en" style={{ colorScheme: "dark" }}>
       <body
-        className={`${firaCode.variable} bg-white text-black min-h-screen antialiased`}
+        className={`${firaCode.variable} bg-[#0a0a0a] text-[#a0a0a0] min-h-screen antialiased`}
         style={{ fontFamily: 'var(--font-fira-code), monospace' }}
       >
         <ConditionalLayout>{children}</ConditionalLayout>

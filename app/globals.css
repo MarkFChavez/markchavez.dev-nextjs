@@ -1,50 +1,30 @@
 @import "tailwindcss";
 
-/* BRUTALIST BLACK & WHITE DESIGN SYSTEM */
+/* MINIMAL DARK TERMINAL DESIGN SYSTEM */
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-
-  /* Pure monochrome palette */
-  --black: #000000;
-  --white: #ffffff;
-  --gray-light: #f5f5f5;
-  --gray-medium: #666666;
+  --background: #0a0a0a;
+  --foreground: #a0a0a0;
+  --foreground-muted: #666666;
+  --foreground-bright: #e0e0e0;
+  --divider: #222222;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
-  /* Monochrome palette */
-  --color-black: var(--black);
-  --color-white: var(--white);
-  --color-gray-light: var(--gray-light);
-  --color-gray-medium: var(--gray-medium);
-
-  /* Brutal box shadows - solid black only */
-  --shadow-brutal: 8px 8px 0px 0px #000000;
-  --shadow-brutal-sm: 4px 4px 0px 0px #000000;
-  --shadow-brutal-lg: 12px 12px 0px 0px #000000;
-  --shadow-brutal-xl: 16px 16px 0px 0px #000000;
-
-  /* Borders */
-  --border-brutal: 4px solid #000000;
-  --border-brutal-thick: 6px solid #000000;
-  --border-brutal-heavy: 8px solid #000000;
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-bright: var(--foreground-bright);
+  --color-divider: var(--divider);
 }
 
-/* Base styles - pure brutalist */
 body {
-  position: relative;
-  overflow-x: hidden;
-  background: #ffffff;
-  color: #000000;
+  background: var(--background);
+  color: var(--foreground);
   font-family: 'Fira Code', 'Courier New', monospace;
 }
 
-/* Optional: Stark grid background pattern */
+/* Grid background pattern */
 body::before {
   content: '';
   position: fixed;
@@ -53,111 +33,39 @@ body::before {
   right: 0;
   bottom: 0;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Custom border widths */
-.border-3 {
-  border-width: 3px;
-}
-
-.border-6 {
-  border-width: 6px;
-}
-
-.border-8 {
-  border-width: 8px;
-}
-
-/* Brutalist text effects */
-.text-brutal-inverse {
-  background: #000000;
-  color: #ffffff;
-  padding: 0.25rem 0.5rem;
-}
-
-/* Custom link styles - heavy underlines */
+/* Links - subtle color shift on hover */
 .t-link {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 3px;
-  text-decoration-color: #000000;
-  transition: all 0.2s;
-  color: #000000;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .t-link:hover {
-  background: #000000;
-  color: #ffffff;
-  text-decoration: none;
+  color: var(--foreground-bright);
 }
 
-/* Minimal animations for brutalist aesthetic */
-@keyframes slideUp {
-  0% { transform: translateY(20px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.animate-slide-up {
-  animation: slideUp 0.3s ease-out;
-}
-
-/* Brutalist card styles with solid shadows */
-.card-brutal {
-  border: 4px solid #000000;
-  box-shadow: var(--shadow-brutal);
-  background: #ffffff;
-  transition: all 0.2s;
-}
-
-.card-brutal:hover {
-  box-shadow: var(--shadow-brutal-lg);
-  transform: translate(-4px, -4px);
-}
-
-/* Utility classes - brutalist style */
-.t-underlined {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #000000;
-}
-
-.t-highlight {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 0.125rem 0.25rem;
-}
-
+/* Muted text */
 .t-muted {
-  color: #666666;
+  color: var(--foreground-muted);
 }
 
 .t-muted:hover {
-  color: #000000;
+  color: var(--foreground);
 }
 
-.t-link-disabled {
-  color: #cccccc;
-  cursor: not-allowed;
-  text-decoration: line-through;
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.t-border {
-  border: 4px solid #000000;
-}
-
-/* Responsive brutal shadows for mobile */
-@media (max-width: 768px) {
-  .shadow-brutal, .card-brutal {
-    box-shadow: 4px 4px 0px 0px #000000;
-  }
-
-  .shadow-brutal-lg, .card-brutal:hover {
-    box-shadow: 6px 6px 0px 0px #000000;
-  }
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
 }

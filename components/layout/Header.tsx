@@ -3,30 +3,25 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="py-3">
-      <div className="text-center grid grid-cols-1 gap-4">
-        {/* Profile section - brutalist styling */}
-        <div className="flex items-center justify-center space-x-4">
-          <div className="relative">
-            <Image
-              src="/me.jpg"
-              alt="Mark Chavez"
-              width={64}
-              height={64}
-              className="w-16 h-16 border-6 border-black shadow-brutal-sm"
-            />
-          </div>
+    <header className="py-4">
+      <div className="flex items-center space-x-4">
+        <Image
+          src="/me.jpg"
+          alt="Mark Chavez"
+          width={48}
+          height={48}
+          className="w-12 h-12 rounded-full opacity-90"
+        />
 
-          <div className="text-left">
-            <Link href="/" className="block">
-              <span className="text-2xl font-black tracking-tight text-black hover:bg-black hover:text-white transition-colors px-1">
-                @markfchavez
-              </span>
-              <p className="text-sm font-thin text-black px-1">
-                Manila, Philippines
-              </p>
-            </Link>
-          </div>
+        <div>
+          <Link href="/" className="block">
+            <span className="text-[#e0e0e0] hover:text-white transition-colors">
+              @markfchavez
+            </span>
+            <p className="text-[#666]">
+              Manila, Philippines
+            </p>
+          </Link>
         </div>
       </div>
     </header>

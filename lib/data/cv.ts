@@ -151,7 +151,7 @@ export const cvData: CVData = {
     {
       name: "Napagastos",
       web_url: "https://napagastos.com",
-      description: "A simple, private expense tracker that helps you understand your daily spending habits. Track every peso, effortlessly.",
+      description: "Simple expense tracker for daily spending habits",
       stack: [
         "ruby-on-rails",
         "tailwindcss"
@@ -160,7 +160,7 @@ export const cvData: CVData = {
     {
       name: "One Rep. Every Day",
       web_url: "https://onerep.day",
-      description: "A 365-day challenge to do Bulgarian split squats every single day. No excuses, no skipped days. Just one rep at a time.",
+      description: "365-day Bulgarian split squat challenge",
       stack: [
         "react.js",
         "tailwindcss",
@@ -170,7 +170,7 @@ export const cvData: CVData = {
     {
       name: "TypeLit",
       web_url: "https://github.com/MarkFChavez/typelit",
-      description: "A self-hosted typing practice app that lets you type through your own books. Read, type, and learn—all at once.",
+      description: "Typing practice app using your own books",
       stack: [
         "ruby-on-rails",
         "tailwindcss"
@@ -198,7 +198,7 @@ export const cvData: CVData = {
     {
       name: "My Ride Log",
       web_url: "https://marksinmotion.bike",
-      description: "Rails application that syncs cycling workout data from Strava via webhooks and visualizes training metrics with D3.js. Built to motivate consistent training through data-driven insights. Demonstrates real-time data processing and API integration patterns.",
+      description: "Cycling metrics dashboard synced with Strava",
       stack: [
         "ruby-on-rails",
         "strava-api",
@@ -209,7 +209,7 @@ export const cvData: CVData = {
     {
       name: "Lynding",
       web_url: "https://github.com/MarkFChavez/lynding_ai",
-      description: "A comprehensive loan management system built with Ruby on Rails, specifically designed and built for a local business.",
+      description: "Loan management system for a local business",
       stack: [
         "ruby-on-rails",
         "tailwindcss"
@@ -218,7 +218,7 @@ export const cvData: CVData = {
     {
       name: "CrewKit",
       web_url: "https://github.com/MarkFChavez/crewkit_rails",
-      description: "Team management system built and designed for managers and teams.",
+      description: "Team management system",
       stack: [
         "ruby-on-rails",
         "tailwindcss"
@@ -227,7 +227,7 @@ export const cvData: CVData = {
     {
       name: "lol_data_fetcher-ruby",
       web_url: "https://github.com/MarkFChavez/lol_data_fetcher-ruby",
-      description: "Ruby gem that fetches champions, items, skins from League of Legends Data Dragon API",
+      description: "Ruby gem for League of Legends Data Dragon API",
       stack: [
         "ruby-on-rails",
         "tailwindcss",
@@ -237,7 +237,7 @@ export const cvData: CVData = {
     },
     {
       name: "Axie Scholar Management",
-      description: "Scholar tracking and payment management system built with Rails and Hotwire. Real-time earnings updates using Turbo Streams, demonstrating how to build responsive dashboards without React or Vue. Automated payment calculations with background jobs.",
+      description: "Scholar tracking and payment management",
       stack: [
         "ruby-on-rails",
         "hotwire",
@@ -247,7 +247,7 @@ export const cvData: CVData = {
     },
     {
       name: "COVID-19 Daily SMS Alerts",
-      description: "Automated SMS alert system built with Rails and sidekiq-cron. Daily job fetches COVID data from public APIs and sends SMS notifications. Demonstrates background job scheduling, API integration, and error handling in production systems.",
+      description: "Automated COVID-19 SMS alert system",
       stack: [
         "ruby-on-rails",
         "sidekiq-cron",
