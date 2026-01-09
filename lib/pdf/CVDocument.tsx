@@ -152,7 +152,7 @@ export const CVDocument = () => {
         {/* Summary */}
         <Text style={styles.summary}>
           Ruby on Rails specialist with 10+ years of experience building web applications across childcare,
-          healthcare, finance, and telecom industries. Expert in Hotwire and Stimulus for creating modern,
+          healthcare, finance, and telecom industries. Comfortable with Hotwire and Stimulus for creating modern,
           interactive experiences with minimal JavaScript. Focused on Rails conventions, clean architecture,
           and pragmatic solutions that scale.
         </Text>
