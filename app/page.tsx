@@ -27,6 +27,16 @@ export default function Home() {
             <li key={project.name}>
               <div className="text-[#e0e0e0]">{project.name}</div>
               <div className="text-[#666]">{project.description}</div>
+              {project.web_url && (
+                <a
+                  href={project.web_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#a0a0a0] underline underline-offset-4 decoration-[#666] hover:text-white hover:decoration-white transition-colors"
+                >
+                  {project.web_url.replace(/^https?:\/\//, '').replace(/\/$/, '')} -&gt;
+                </a>
+              )}
             </li>
           ))}
         </ul>

@@ -169,7 +169,6 @@ export const cvData: CVData = {
     },
     {
       name: "TypeLit",
-      web_url: "https://github.com/MarkFChavez/typelit",
       description: "Typing practice app using your own books",
       stack: [
         "ruby-on-rails",
@@ -178,7 +177,6 @@ export const cvData: CVData = {
     },
     {
       name: "League Rosters",
-      web_url: "https://lolroster.xyz",
       description: "Directory of League of Legends teams and rosters.",
       stack: [
         "ruby-on-rails",
@@ -188,7 +186,6 @@ export const cvData: CVData = {
     },
     {
       name: "League Directory",
-      web_url: "https://lolpedia.xyz",
       description: "Directory of League of Legends champions, skills, and items.",
       stack: [
         "ruby-on-rails",
@@ -208,7 +205,6 @@ export const cvData: CVData = {
     },
     {
       name: "Lynding",
-      web_url: "https://github.com/MarkFChavez/lynding_ai",
       description: "Loan management system for a local business",
       stack: [
         "ruby-on-rails",
@@ -217,7 +213,6 @@ export const cvData: CVData = {
     },
     {
       name: "CrewKit",
-      web_url: "https://github.com/MarkFChavez/crewkit_rails",
       description: "Team management system",
       stack: [
         "ruby-on-rails",
@@ -226,7 +221,6 @@ export const cvData: CVData = {
     },
     {
       name: "lol_data_fetcher-ruby",
-      web_url: "https://github.com/MarkFChavez/lol_data_fetcher-ruby",
       description: "Ruby gem for League of Legends Data Dragon API",
       stack: [
         "ruby-on-rails",
