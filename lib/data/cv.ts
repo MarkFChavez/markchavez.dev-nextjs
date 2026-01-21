@@ -150,7 +150,6 @@ export const cvData: CVData = {
   side_projects: [
     {
       name: "Napagastos",
-      web_url: "https://napagastos.com",
       description: "Simple expense tracker for daily spending habits",
       stack: [
         "ruby-on-rails",
