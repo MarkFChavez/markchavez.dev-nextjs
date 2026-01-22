@@ -39,9 +39,10 @@ export default function CVPage() {
       {/* about */}
       <section>
         <p className="leading-relaxed">
-          Ruby on Rails specialist with 10+ years of experience building web applications across childcare, healthcare,
-          finance, and telecom industries. Comfortable with Hotwire and Stimulus for creating modern, interactive experiences
-          with minimal JavaScript. Focused on Rails conventions, clean architecture, and pragmatic solutions that scale.
+          Software engineer with 10+ years of experience building web applications across childcare, healthcare,
+          finance, and telecom industries. Deep expertise in Ruby on Rails, Hotwire, and Stimulus for creating modern,
+          server-rendered experiences with minimal JavaScript. Agentic coding tools are now central to my workflow—making
+          me faster and more adaptable across stacks. Focused on clean architecture and pragmatic solutions that scale.
         </p>
       </section>
 

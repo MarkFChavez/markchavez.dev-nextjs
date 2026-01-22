@@ -9,7 +9,7 @@ export default function Home() {
       <section className="space-y-4">
         <h1 className="text-xl text-[#e0e0e0] pb-2">about</h1>
         <p className="leading-relaxed">
-          I build web apps with Ruby on Rails, Hotwire, and Stimulus. I like server-rendered HTML, minimal JavaScript, and clean code that&apos;s easy to maintain. Lately, I&apos;ve been using agentic coding tools daily and it&apos;s made me significantly more productive. If you need help shipping something reliable, feel free to{' '}
+          I build web apps with Ruby on Rails, Hotwire, and Stimulus—but I&apos;m not locked into any stack. I favor server-rendered HTML, minimal JavaScript, and clean code that&apos;s easy to maintain. Agentic coding tools have become central to my daily workflow, making me faster and more adaptable across technologies. If you need help shipping something reliable, feel free to{' '}
           <a
             href="mailto:mjfchavez@gmail.com"
             className="text-[#e0e0e0] hover:text-white transition-colors"

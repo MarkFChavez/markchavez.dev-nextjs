@@ -13,8 +13,8 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Mark Chavez - Rails Developer",
-  description: "Ruby on Rails developer specializing in Hotwire, Stimulus, and progressive enhancement",
+  title: "Mark Chavez",
+  description: "Personal website of Mark Chavez, a software engineer specializing in Ruby on Rails, Hotwire, and Stimulus",
   other: {
     "color-scheme": "dark",
   },
