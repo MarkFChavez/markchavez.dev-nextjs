@@ -193,7 +193,7 @@ export const cvData: CVData = {
     },
     {
       name: "My Ride Log",
-      web_url: "https://marksinmotion.bike",
+      web_url: "",
       description: "Cycling metrics dashboard synced with Strava",
       stack: [
         "ruby-on-rails",
